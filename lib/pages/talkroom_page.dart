@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mychat/models/room_class.dart';
 
-class RoomlistPage extends StatefulWidget {
-  const RoomlistPage({ Key? key }) : super(key: key);
+class TalkroomPage extends StatefulWidget {
+  const TalkroomPage({ Key? key }) : super(key: key);
   @override
-  _RoomlistPageState createState() => _RoomlistPageState();
+  _TalkroomPageState createState() => _TalkroomPageState();
 }
 
-class _RoomlistPageState extends State<RoomlistPage> {
+class _TalkroomPageState extends State<TalkroomPage> {
 
   List<RoomClass> roomlist = [
     RoomClass(
@@ -34,14 +34,14 @@ class _RoomlistPageState extends State<RoomlistPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ルームリスト'),
+        title: const Text('トークルーム', style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: ListView.builder(
         itemCount: roomlist.length,
         itemBuilder: (context, index) {
           return Container(
             height: 70,
-            color: Colors.red[50],
+            color: Colors.white,
             child: Row(
               children: [
                 Padding(

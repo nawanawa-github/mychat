@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mychat/pages/home_page.dart';
-import 'package:mychat/pages/roomlist_page.dart';
+import 'package:mychat/pages/talkroom_page.dart';
 import 'package:mychat/pages/setting_page.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    RoomlistPage(),
+    TalkroomPage(),
     SettingPage(),
   ];
 

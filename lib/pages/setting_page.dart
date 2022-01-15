@@ -12,7 +12,7 @@ class _SettingPageState extends State<SettingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('設定'),
+        title: const Text('設定', style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: Container(
         color: Colors.red,
