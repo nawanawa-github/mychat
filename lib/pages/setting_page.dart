@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mychat/models/account_class.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({ Key? key }) : super(key: key);
@@ -15,6 +17,19 @@ class _SettingPageState extends State<SettingPage> {
     name: '高橋一子',
     accountIcon: 'https://www.oshiri-tantei.com/assets/img/character/osiri/01_img.png',
   );
+  File? image;
+  final picker = ImagePicker();
+  //アルバムから画像取得
+  Future getImageFromGallery() async {
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      if(pickedFile != null) {
+        image = File(pickedFile.path);
+      }
+    });
+  }
+  
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +42,15 @@ class _SettingPageState extends State<SettingPage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(myAccount.accountIcon),
-              radius: 50,
-              child: const Text('写真を変更', style: TextStyle(color: Colors.black)),
+            child: InkWell(
+              onTap: (){
+                getImageFromGallery();
+              },
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(myAccount.accountIcon),
+                radius: 50,
+                child: const Text('写真を変更', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+              ), 
             ),
           ),
           const SizedBox(height: 8,),
@@ -57,6 +77,12 @@ class _SettingPageState extends State<SettingPage> {
               onPressed: (){},
               child: const Text('変更 ')
             ),
+          ),
+          image == null ? const Text('画像が選択されていません') : Container(
+            height: 200,
+            width: 200,
+            color: Colors.black,
+            child: Image.file(image!, fit: BoxFit.cover),
           ),
         ],
       ),
