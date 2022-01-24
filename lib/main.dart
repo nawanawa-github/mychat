@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mychat/pages/home_page.dart';
-import 'package:mychat/pages/talkroom_page.dart';
+import 'package:mychat/pages/talklist_page.dart';
 import 'package:mychat/pages/setting_page.dart';
 
 void main() {
