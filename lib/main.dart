@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mychat/pages/home_page.dart';
-import 'package:mychat/pages/talklist_page.dart';
+import 'package:mychat/pages/roomlist_page.dart';
 import 'package:mychat/pages/setting_page.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    TalkroomPage(),
+    RoomlistPage(),
     SettingPage(),
   ];
 
@@ -56,7 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.question_answer),
-            label: 'トーク',
+            label: 'ルーム',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),

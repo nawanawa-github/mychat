@@ -103,10 +103,10 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
                 child: Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(friendlist[index].accountIcon),
+                        // backgroundImage: NetworkImage(friendlist[index].accountIcon),
                         radius: 30,
                       ),
                     ),
@@ -130,10 +130,10 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
                 child: Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(roomlist[index].roomIcon),
+                        // backgroundImage: NetworkImage(roomlist[index].roomIcon),
                         radius: 30,
                       ),
                     ),
