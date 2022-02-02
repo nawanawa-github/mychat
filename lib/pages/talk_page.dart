@@ -101,12 +101,33 @@ class _TalkPageState extends State<TalkPage> {
               );
             }
           ),
+          InkWell(
+            onTap: (){},
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                width: size.width,
+                height: size.height*0.08,
+                color: Colors.brown[50],
+                child: SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text('高橋が', style: TextStyle(fontSize: 20)),
+                      Text('+500円', style: TextStyle(fontSize: 20, color: Colors.pink)),
+                      Text('支払い済み', style: TextStyle(fontSize: 20)),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
               width: size.width,
               height: size.height*0.08,
-              color: Colors.brown[100],
+              color: Colors.brown[50],
               child: Padding(
                 padding: const EdgeInsets.all(3.0),
                 child: Row(
@@ -119,7 +140,7 @@ class _TalkPageState extends State<TalkPage> {
                       child: TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          contentPadding: EdgeInsets.symmetric(horizontal: 3, vertical: 0),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                         )
                       ),
                     ),
